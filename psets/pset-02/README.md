@@ -128,28 +128,33 @@ La suspensión corresponde al **solicitante**, no a un estado de la reserva; por
 
 Además, la simulación contiene una **prueba de desplazamiento por prioridad** antes del escenario 4. Se comprobó por separado que un bloqueo administrativo impide desplazar una reserva existente y preserva su estado.
 
-## 7. Correspondencia con la documentación PDF
+## 7. Documentación entregada
 
-Los documentos de entrega deben corresponder a **esta versión** de los métodos, los estados y el orden de la simulación:
+El PSet #2 incluye los siguientes documentos:
 
-1. **Requerimientos actualizados:** continuar numeración RF/RNF del PSet 1, distinguir requisitos nuevos/modificados y formular el RNF de concurrencia de forma verificable.
-2. **Modelo de dominio actualizado:** incluir sede, reserva recurrente, bloqueo, suspensión y relaciones entre entidades.
-3. **Casos de uso y flujos:** incluir «Reservar de forma recurrente», «Bloquear canchas para un evento» y «Cancelar una reserva» modificada; documentar actor, precondiciones y flujos alternos con notación número + letra.
-4. **Robustez (ICONIX):** «Cancelar una reserva»; actor conectado únicamente a frontera y sin conexión directa frontera–entidad.
-5. **Secuencia:** «Reservar una cancha», comenzando con el mensaje a `ReservaUFacade`; alternativas para cancha no disponible, estudiante suspendido y horario fuera del permitido.
-6. **Actividad:** «Reservar de forma recurrente», validación semana por semana y decisión de todo o nada.
-7. **Máquina de estados:** `Reserva` con `CONFIRMADA`, `CANCELADA`, `NO_SHOW` y `ANULADA`, eventos, guardas temporales y estados terminales.
+1. `01_Requerimientos_ReservaU.pdf`: requerimientos
+   funcionales RF-01 a RF-22 y no funcionales RNF-01 a RNF-06.
 
-**Importante:** este README documenta el código y la evidencia de simulación; no sustituye los siete entregables de documentación en PDF. Al finalizar los PDF, reemplazar en la tabla de patrones los nombres de requisitos por sus identificadores RF/RNF definitivos y verificar la correspondencia de cada caso de uso y diagrama.
+2. `02_Modelo_de_Dominio_ReservaU.pdf`: modelo conceptual
+   de las entidades y sus relaciones.
 
+3. `03_Diagrama_de_Casos_de_Uso_ReservaU.pdf`: actores
+   y funcionalidades principales del sistema.
 
-## 8. Correspondencia con los PDF entregados
+4. `04_Diagramas_de_Flujo_Casos_de_Uso_ReservaU.pdf`:
+   flujos principales y alternativos de los casos de uso.
 
-- `01_Requerimientos_ReservaU.pdf`: RF-01 a RF-22 y RNF-01 a RNF-06.
-- `02_Modelo_de_Dominio_ReservaU.pdf`: entidades y colaboradores con nombres de la implementacion.
-- `03_Diagrama_de_Casos_de_Uso_ReservaU.pdf`: actores y casos de uso.
-- `04_Diagramas_de_Flujo_Casos_de_Uso_ReservaU.pdf`: CU-01, CU-02, CU-04 y CU-05.
-- `05_Diagrama_de_Robustez_Cancelar_Reserva.pdf`: CU-02 ICONIX.
-- `06_Diagrama_de_Secuencia_Reservar_Cancha.pdf`: CU-01 con orden real y alternativas.
-- `07_Diagrama_de_Actividad_Reserva_Recurrente.pdf`: CU-04 con ciclo semanal.
-- `08_Diagrama_de_Estados_Reserva.pdf`: estados efectivamente implementados.
+5. `05_Diagrama_de_Robustez_Cancelar_Reserva.pdf`:
+   representación ICONIX del proceso de cancelación.
+
+6. `06_Diagrama_de_Secuencia_Reservar_Cancha.pdf`:
+   interacciones necesarias para realizar una reserva.
+
+7. `07_Diagrama_de_Actividad_Reserva_Recurrente.pdf`:
+   proceso de validación y confirmación de reservas recurrentes.
+
+8. `08_Diagrama_de_Estados_Reserva.pdf`:
+   estados y transiciones del ciclo de vida de una reserva.
+
+Los diagramas representan el diseño del sistema.
+La implementación en Python y la simulación documentan su comportamiento ejecutable.
